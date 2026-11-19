@@ -388,12 +388,12 @@ export default function Home() {
               <div>
                 <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
                   <div className="flex items-center gap-2">
-                    <Cpu className="w-4 h-4 text-emerald-600" />
+                    <Cpu className="w-4 h-4 text-[var(--accent)]" />
                     <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
                       Stage 02 · Engine
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold border border-emerald-200">
+                  <span className="text-[11px] font-mono text-[var(--accent)] bg-[var(--accent-light)] px-2 py-0.5 rounded font-semibold border border-[#BAE6FD]">
                     Bespoke Code
                   </span>
                 </div>
@@ -421,7 +421,7 @@ export default function Home() {
 
               <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between text-[11px]">
                 <span className="text-[var(--text-muted)]">Core Framework</span>
-                <span className="font-semibold text-emerald-700 font-mono">Next.js · Node · Python</span>
+                <span className="font-semibold text-[var(--accent)] font-mono">Next.js · Node · Python</span>
               </div>
             </div>
 
@@ -682,11 +682,11 @@ export default function Home() {
                 {tabContent[activeTab].desc}
               </p>
 
-              {/* Green checkmark list */}
+              {/* Blue checkmark list */}
               <div className="space-y-3 pt-2">
                 {tabContent[activeTab].bullets.map((bullet, bIdx) => (
                   <div key={bIdx} className="flex items-start gap-3 text-sm text-[var(--text-primary)]">
-                    <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-[var(--accent-light)] text-[var(--accent)] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span>{bullet}</span>
