@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0D0C0A"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#C5A059" stroke-opacity="0.3" stroke-width="1.5"/>
+  <!-- Elegant fine-art Monogram 'ET' in warm champagne gold -->
+  <path d="M18 20H34M26 20V44M20 44H32" stroke="#E2C992" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Infinity loop accent -->
+  <path d="M38 32C38 28.5 41 26 44.5 26C48 26 50.5 28.5 50.5 32C50.5 35.5 48 38 44.5 38C41 38 38 35.5 38 32Z" stroke="#C5A059" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="44.5" cy="32" r="1.5" fill="#E2C992"/>
+</svg>
