@@ -1,109 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #08090E;
-  --foreground: #F4F6FB;
-  --font-serif: var(--font-serif);
+  --background: #06080F;
+  --foreground: #F8FAFC;
   --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
 @theme inline {
-  --color-canvas: #08090E;
-  --color-surface: #0E121B;
-  --color-surface-elevated: #141926;
+  --color-obsidian: #06080F;
+  --color-obsidian-surface: #0E1320;
+  --color-obsidian-elevated: #141C30;
   --color-cobalt: #2563EB;
   --color-cyan-glow: #38BDF8;
-  --color-gold: #C5A059;
-  --color-gold-light: #E8D5A7;
-  --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-/* Awwwards-tier Obsidian Luxury Backdrop */
-.luxury-canvas {
-  background-color: #08090E;
+/* Master Obsidian luxury canvas with hardware acceleration */
+.obsidian-canvas {
+  background-color: #06080F;
   background-image: 
-    radial-gradient(ellipse 100% 70% at 50% -15%, rgba(37, 99, 235, 0.18) 0%, transparent 65%),
-    radial-gradient(circle 650px at 90% 30%, rgba(56, 189, 248, 0.08) 0%, transparent 70%),
-    radial-gradient(circle 600px at 10% 70%, rgba(197, 160, 89, 0.07) 0%, transparent 70%),
-    radial-gradient(circle 500px at 50% 100%, rgba(37, 99, 235, 0.12) 0%, transparent 65%);
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(37, 99, 235, 0.22) 0%, transparent 65%),
+    radial-gradient(circle 600px at 85% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 65%),
+    radial-gradient(circle 500px at 15% 75%, rgba(37, 99, 235, 0.14) 0%, transparent 70%);
 }
 
-/* Precision Architectural Dot & Guilloche Canvas */
-.architectural-fine-grid {
-  background-size: 40px 40px;
-  background-image: 
-    radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+/* Subtle architectural dot grid with hardware layer */
+.architectural-grid {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.14) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
-/* Glassmorphism Luxury Cards */
-.luxury-card {
-  background: linear-gradient(180deg, rgba(16, 21, 34, 0.72) 0%, rgba(11, 15, 25, 0.88) 100%);
+/* Glassmorphic Luxury Surfaces - ZERO FLICKER with will-change and transformZ */
+.glass-panel {
+  background: rgba(14, 19, 32, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.glass-panel-elevated {
+  background: rgba(18, 26, 44, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   box-shadow: 
-    0 20px 50px -15px rgba(0, 0, 0, 0.8), 
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 0 30px rgba(37, 99, 235, 0.04);
+    0 20px 50px -15px rgba(0, 0, 0, 0.9), 
+    0 0 40px -10px rgba(37, 99, 235, 0.28), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.14);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.luxury-card-elevated {
-  background: linear-gradient(180deg, rgba(20, 27, 45, 0.88) 0%, rgba(13, 18, 30, 0.94) 100%);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  box-shadow: 
-    0 30px 70px -20px rgba(0, 0, 0, 0.9), 
-    0 0 50px -10px rgba(37, 99, 235, 0.22), 
-    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+/* Kinetic Gradient Glow Borders */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-/* Hairlines */
+/* Hairline borders */
 .hairline-b {
-  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.18);
 }
-
 .hairline-t {
-  border-top: 1px solid rgba(56, 189, 248, 0.14);
+  border-top: 1px solid rgba(59, 130, 246, 0.18);
 }
 
-.hairline-all {
-  border: 1px solid rgba(56, 189, 248, 0.16);
+/* Text glow utilities */
+.text-glow {
+  text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
 }
 
-/* Iridescent Text Gradients */
-.text-hero-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #E0F2FE 40%, #93C5FD 75%, #38BDF8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gold-gradient {
-  background: linear-gradient(135deg, #FBF8F1 0%, #E8D5A7 50%, #C5A059 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Serif font utility */
-.font-editorial {
-  font-family: var(--font-serif), Georgia, serif;
-}
-
-/* Smooth custom scrollbar */
+/* Custom smooth scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090E;
+  background: #06080F;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #1e293b;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #2563eb;
 }

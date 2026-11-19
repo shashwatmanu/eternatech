@@ -1,41 +1,40 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#08090E",
+  themeColor: "#06080F",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "EternaTech — Bespoke Software & Intelligence Systems",
+  title: "EternaTech — Custom Apps & AI Systems Engineered for Scale",
   description:
-    "Engineering-first private technology studio based in Delhi NCR. Bespoke web platforms, mobile apps, and intelligent WhatsApp & backend automations for ambitious enterprises.",
+    "Engineering-first technology studio based in Delhi NCR. Bespoke web platforms, mobile apps, and intelligent WhatsApp & backend automations for ambitious businesses.",
   metadataBase: new URL("https://eternatech.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "EternaTech — Bespoke Software & Intelligence Systems",
+    title: "EternaTech — Custom Apps & AI Systems Engineered for Scale",
     description:
-      "Engineering-first private technology studio based in Delhi NCR, partnering with founders and ambitious businesses to ship high-leverage software.",
+      "Engineering-first technology studio based in Delhi NCR, partnering with founders and ambitious businesses to ship high-leverage software.",
     url: "https://eternatech.in",
     siteName: "EternaTech",
     locale: "en_IN",
@@ -51,20 +50,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EternaTech — Bespoke Software & Intelligence Systems",
+    title: "EternaTech — Custom Apps & AI Systems Engineered for Scale",
     description:
       "Bespoke web platforms, mobile apps, and intelligent WhatsApp & backend automations.",
     images: ["/logo-colored.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=4" },
-      { url: "/favicon.png?v=4", type: "image/png" },
-      { url: "/logo-colored.png?v=4", type: "image/png" },
+      { url: "/favicon.ico?v=5" },
+      { url: "/favicon.png?v=5", type: "image/png" },
+      { url: "/logo-colored.png?v=5", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=4",
+    shortcut: "/favicon.ico?v=5",
     apple: [
-      { url: "/apple-icon.png?v=4", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=5", sizes: "180x180", type: "image/png" },
     ],
   },
 };
@@ -78,16 +77,16 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${cormorant.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
+      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=4" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.png?v=4" />
-        <link rel="apple-touch-icon" href="/apple-icon.png?v=4" />
+        <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=5" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=5" />
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#08090E] text-[#F4F6FB] font-sans overflow-x-hidden selection:bg-blue-600/30 selection:text-cyan-200"
+        className="min-h-screen bg-[#06080F] text-[#F8FAFC] font-sans overflow-x-hidden selection:bg-blue-600/30 selection:text-cyan-200"
       >
         {children}
       </body>
