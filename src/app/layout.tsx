@@ -40,16 +40,31 @@ export const metadata: Metadata = {
     siteName: "EternaTech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "EternaTech Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "EternaTech — Bespoke Software & Intelligence Systems",
     description:
       "Bespoke web platforms, mobile apps, and intelligent WhatsApp & backend automations.",
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.ico?v=3" },
+      { url: "/favicon.png?v=3", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico?v=3",
+    apple: [
+      { url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 

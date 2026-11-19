@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
@@ -154,10 +155,17 @@ export default function Home() {
       {/* 1. EDITORIAL HEADER */}
       <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#0B0A08]/85 hairline-b transition-all">
         <div className="max-w-4xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between relative z-10">
-          {/* Studio Wordmark with Custom Monogram Emblem */}
+          {/* Studio Wordmark with White Emblem */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-8 h-8 rounded-lg border border-[#C5A059]/35 bg-[#171511] flex items-center justify-center text-[#E8D5A7] font-editorial text-sm font-semibold shadow-inner group-hover:border-[#C5A059] transition-all">
-              ET
+            <div className="relative w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-105">
+              <Image
+                src="/logo.png"
+                alt="EternaTech Logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(255,255,255,0.12)]"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-editorial text-xl sm:text-2xl tracking-[0.12em] text-[#F7F3EB] font-light uppercase">
@@ -696,14 +704,25 @@ export default function Home() {
 
       {/* 9. FLOATING CONCIERGE DOCK FOR MOBILE */}
       <aside className="fixed bottom-4 left-4 right-4 sm:hidden z-50">
-        <div className="luxury-card-elevated rounded-full p-2.5 pl-4 flex items-center justify-between shadow-2xl border border-[#C5A059]/40 backdrop-blur-2xl">
-          <div className="flex flex-col">
-            <span className="font-editorial text-sm text-[#F7F3EB] leading-none">
-              EternaTech
-            </span>
-            <span className="text-[9px] text-[#C5A059] tracking-wider uppercase mt-0.5">
-              Available Q4/Q1
-            </span>
+        <div className="luxury-card-elevated rounded-full p-2.5 pl-3.5 flex items-center justify-between shadow-2xl border border-[#C5A059]/40 backdrop-blur-2xl">
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 flex items-center justify-center shrink-0">
+              <Image
+                src="/logo.png"
+                alt="EternaTech"
+                width={28}
+                height={28}
+                className="w-full h-full object-contain filter drop-shadow-[0_1px_6px_rgba(255,255,255,0.15)]"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-editorial text-sm text-[#F7F3EB] leading-none">
+                EternaTech
+              </span>
+              <span className="text-[9px] text-[#C5A059] tracking-wider uppercase mt-0.5">
+                Available Q4/Q1
+              </span>
+            </div>
           </div>
 
           <a
@@ -713,7 +732,7 @@ export default function Home() {
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#C5A059] to-[#D8B467] text-[#0B0A08] text-xs font-semibold tracking-wide shadow-md"
           >
             <MessageCircle className="w-3.5 h-3.5" />
-            <span>Connect on WhatsApp</span>
+            <span>WhatsApp Direct</span>
           </a>
         </div>
       </aside>
@@ -721,8 +740,15 @@ export default function Home() {
       {/* 10. MINIMALIST FOOTER */}
       <footer className="hairline-t py-8 px-5 sm:px-8 text-center text-xs text-[#968F84] relative z-10">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 font-light">
-          <div>
-            © 2026 EternaTech · Ghaziabad / Delhi NCR, India · eternatech.in
+          <div className="flex items-center justify-center sm:justify-start gap-2.5">
+            <Image
+              src="/logo.png"
+              alt="EternaTech"
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain"
+            />
+            <span>© 2026 EternaTech · Ghaziabad / Delhi NCR, India · eternatech.in</span>
           </div>
           <div className="text-[11px] text-[#C5A059]/80 tracking-widest uppercase">
             Bespoke Engineering &amp; Artificial Intelligence
