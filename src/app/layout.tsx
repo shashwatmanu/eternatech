@@ -1,23 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-sans",
+const playfair = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["700", "800"],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#06080F",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=5" },
-      { url: "/favicon.png?v=5", type: "image/png" },
-      { url: "/logo-colored.png?v=5", type: "image/png" },
+      { url: "/favicon.ico?v=6" },
+      { url: "/favicon.png?v=6", type: "image/png" },
+      { url: "/logo-colored.png?v=6", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=5",
+    shortcut: "/favicon.ico?v=6",
     apple: [
-      { url: "/apple-icon.png?v=5", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=6", sizes: "180x180", type: "image/png" },
     ],
   },
 };
@@ -77,16 +77,16 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth antialiased`}
+      className={`${playfair.variable} ${inter.variable} scroll-smooth antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico?v=5" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.png?v=5" />
-        <link rel="apple-touch-icon" href="/apple-icon.png?v=5" />
+        <link rel="icon" href="/favicon.ico?v=6" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=6" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=6" />
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#06080F] text-[#F8FAFC] font-sans overflow-x-hidden selection:bg-blue-600/30 selection:text-cyan-200"
+        className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] font-body overflow-x-hidden selection:bg-[#0284C7]/20 selection:text-[#0284C7]"
       >
         {children}
       </body>
