@@ -86,7 +86,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] font-body overflow-x-hidden selection:bg-[#0284C7]/20 selection:text-[#0284C7]"
+        className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] font-body overflow-x-hidden selection:bg-[#1C4BB6]/20 selection:text-[#1C4BB6]"
       >
         {children}
       </body>

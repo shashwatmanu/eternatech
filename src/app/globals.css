@@ -13,10 +13,10 @@
   --border: #E8E8E8;
   --border-dashed: rgba(17,17,17,0.18);
 
-  /* Brand Accent: EternaTech Blue matching physical logo */
-  --accent: #0284C7;
-  --accent-hover: #0369A1;
-  --accent-light: #E0F2FE;
+  /* Brand Accent: Exact Royal/Cobalt Blue sampled from right side of logo (#1C4BB6) */
+  --accent: #1C4BB6;
+  --accent-hover: #153E9B;
+  --accent-light: #EEF4FF;
   --accent-fg: #FFFFFF;
 
   /* Data viz per DESIGN.md: warm yellow for charts, independent of brand accent */
@@ -191,7 +191,7 @@ h1, h2 {
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.32);
+  box-shadow: 0 4px 14px rgba(28, 75, 182, 0.32);
 }
 
 .btn-primary:active {
