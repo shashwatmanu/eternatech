@@ -20,6 +20,11 @@ import {
   Workflow,
   CheckCircle2,
   Lock,
+  Globe,
+  Database,
+  Terminal,
+  Zap,
+  TrendingUp,
 } from "lucide-react";
 
 export default function Home() {
@@ -38,6 +43,7 @@ export default function Home() {
       description:
         "Engineered an automated WhatsApp core handling over 14,000 monthly SKU inquiries, dynamic quote generation, and instant ERP order booking without human latency.",
       tags: ["WhatsApp Cloud API", "FastAPI", "PostgreSQL", "Next.js"],
+      accent: "from-blue-500/20 via-cyan-500/10 to-transparent",
     },
     {
       title: "Unified Logistics & Driver Fleet Portal",
@@ -46,6 +52,7 @@ export default function Home() {
       description:
         "Bespoke mobile dispatch web app with offline-first synchronization, automated trip manifests, and GPS-stamped delivery verification replacing 60+ legacy Excel logs.",
       tags: ["Mobile PWA", "Cloudflare Workers", "Realtime Sync"],
+      accent: "from-cyan-500/20 via-blue-500/10 to-transparent",
     },
     {
       title: "Automated Document OCR & Ledger Sync",
@@ -54,6 +61,7 @@ export default function Home() {
       description:
         "Intelligent multi-lingual invoice and tax document parser wiring vendor WhatsApp submissions directly into central financial ledgers with 99.8% precision.",
       tags: ["Vision LLM", "Custom ERP", "Zero SaaS Licensing"],
+      accent: "from-amber-500/15 via-blue-500/10 to-transparent",
     },
   ];
 
@@ -70,6 +78,7 @@ export default function Home() {
         "Enterprise-grade security, RBAC & payment gateway orchestration",
         "Zero per-seat software licensing fees — 100% intellectual property ownership",
       ],
+      icon: Globe,
     },
     {
       num: "II",
@@ -83,6 +92,7 @@ export default function Home() {
         "Real-time ERP and CRM bidirectional data synchronization",
         "Zero human latency with transparent executive audit trails",
       ],
+      icon: Zap,
     },
     {
       num: "III",
@@ -96,6 +106,7 @@ export default function Home() {
         "Migrate seamlessly away from manual Excel spreadsheets",
         "Dedicated private cloud deployment on AWS or Google Cloud",
       ],
+      icon: Database,
     },
   ];
 
@@ -143,48 +154,51 @@ export default function Home() {
   ];
 
   return (
-    <div className="luxury-canvas min-h-screen text-[#EDE8DF] relative pb-28 sm:pb-16 overflow-x-hidden">
-      {/* Architectural Atmospheric Texture Layers */}
+    <div className="luxury-canvas min-h-screen text-[#F4F6FB] relative pb-28 sm:pb-16 overflow-x-hidden">
+      {/* Precision Architectural Dot Pattern */}
       <div className="fixed inset-0 architectural-fine-grid opacity-35 pointer-events-none z-0" />
 
-      {/* Warm Ambient Radial Halos */}
-      <div className="fixed -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#C5A059]/10 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="fixed top-[45%] -right-48 w-[500px] h-[500px] bg-[#916F2C]/08 rounded-full blur-[130px] pointer-events-none z-0" />
-      <div className="fixed bottom-0 -left-48 w-[600px] h-[600px] bg-[#C5A059]/07 rounded-full blur-[150px] pointer-events-none z-0" />
+      {/* Kinetic Ambient Lighting Glows */}
+      <div className="fixed -top-48 left-1/2 -translate-x-1/2 w-[800px] h-[700px] bg-blue-600/15 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="fixed top-[35%] -right-40 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none z-0" />
+      <div className="fixed top-[70%] -left-40 w-[600px] h-[600px] bg-blue-700/12 rounded-full blur-[160px] pointer-events-none z-0" />
 
-      {/* 1. EDITORIAL HEADER */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#0B0A08]/85 hairline-b transition-all">
-        <div className="max-w-4xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between relative z-10">
-          {/* Studio Wordmark with White Emblem */}
-          <a href="#" className="flex items-center gap-3 group focus:outline-none">
-            <div className="relative w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-105">
+      {/* 1. STICKY GLASS HEADER */}
+      <header className="sticky top-0 z-40 w-full backdrop-blur-2xl bg-[#08090E]/80 hairline-b transition-all">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-3.5 sm:py-4 flex items-center justify-between relative z-10">
+          {/* Studio Brandmark with Enlarged Colored Logo */}
+          <a href="#" className="flex items-center gap-3.5 group focus:outline-none">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shrink-0">
               <Image
-                src="/logo.png"
+                src="/logo-colored.png"
                 alt="EternaTech Logo"
-                width={36}
-                height={36}
-                className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(255,255,255,0.12)]"
+                width={56}
+                height={56}
+                className="w-full h-full object-contain filter drop-shadow-[0_0_18px_rgba(56,189,248,0.35)]"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-editorial text-xl sm:text-2xl tracking-[0.12em] text-[#F7F3EB] font-light uppercase">
-                EternaTech
-              </span>
-              <span className="text-[9px] tracking-[0.24em] text-[#C5A059] uppercase font-sans font-medium -mt-0.5">
-                Software &amp; Systems Studio
+              <div className="flex items-center gap-2">
+                <span className="font-editorial text-2xl sm:text-3xl tracking-[0.08em] text-white font-light uppercase leading-none">
+                  EternaTech
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse hidden sm:inline-block" />
+              </div>
+              <span className="text-[10px] tracking-[0.24em] text-cyan-400/90 uppercase font-sans font-medium mt-1">
+                Software &amp; Intelligence Studio
               </span>
             </div>
           </a>
 
-          {/* Direct Private Action */}
+          {/* Action Button */}
           <div className="flex items-center gap-4">
-            <span className="hidden sm:inline-block text-xs tracking-wider text-[#968F84] uppercase font-medium">
+            <span className="hidden sm:inline-block text-xs tracking-wider text-slate-400 uppercase font-mono">
               NCR · Global
             </span>
             <a
               href="#contact"
-              className="text-xs sm:text-sm tracking-[0.08em] px-4 py-2 sm:px-5 sm:py-2 rounded-full border border-[#C5A059]/40 text-[#E8D5A7] hover:bg-[#C5A059]/10 hover:border-[#C5A059] transition-all font-medium uppercase shadow-sm"
+              className="text-xs sm:text-sm tracking-[0.06em] px-5 py-2.5 rounded-full font-medium uppercase text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-[0_0_24px_rgba(37,99,235,0.4)] hover:shadow-[0_0_35px_rgba(56,189,248,0.6)] transition-all duration-300 active:scale-[0.98]"
             >
               Consult Studio
             </a>
@@ -192,41 +206,41 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-5 sm:px-8 relative z-10">
-        {/* 2. HERO SECTION — LUXURY EDITORIAL STATEMENT */}
-        <section className="pt-14 sm:pt-24 pb-16 sm:pb-24 text-center">
-          {/* Subtle status ornament with crest styling */}
+      <main className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">
+        {/* 2. HERO SECTION — AWWWARDS-GRADE VISUAL IMPACT */}
+        <section className="pt-16 sm:pt-24 pb-16 sm:pb-24 text-center">
+          {/* Status Badge */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-[#C5A059]/30 bg-[#161410]/80 backdrop-blur-md shadow-sm"
+            className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-cyan-400/30 bg-blue-950/40 backdrop-blur-md shadow-inner"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] animate-pulse" />
-            <span className="text-[10px] sm:text-xs tracking-[0.22em] uppercase text-[#E8D5A7] font-medium">
-              Accepting Select Q4 / Q1 Commissions
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+            <span className="text-[11px] sm:text-xs tracking-[0.22em] uppercase text-cyan-200 font-mono font-medium">
+              Accepting Select Q4 / Q1 Builds · NCR &amp; Global
             </span>
           </motion.div>
 
-          {/* Primary Editorial Headline */}
+          {/* Hero Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-editorial text-4xl sm:text-6xl md:text-7xl font-light tracking-[-0.02em] leading-[1.08] text-[#F7F3EB] mb-6 max-w-3xl mx-auto"
+            className="font-editorial text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-light tracking-[-0.02em] leading-[1.05] text-white mb-6 max-w-4xl mx-auto"
           >
             Custom Apps &amp; AI Systems{" "}
-            <span className="italic font-normal text-gold-gradient">
+            <span className="italic font-normal text-hero-gradient">
               Engineered for Scale.
             </span>
           </motion.h1>
 
-          {/* Editorial Subheadline */}
+          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-[#B3ACA0] leading-relaxed max-w-2xl mx-auto mb-10 font-light"
+            className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-light"
           >
             We replace slow, manual operations with bespoke web platforms,
             mobile applications, and intelligent WhatsApp &amp; backend automations.
@@ -237,162 +251,165 @@ export default function Home() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto mb-14"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-md mx-auto mb-14"
           >
             <a
               href={WHATSAPP_PRIMARY}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#C5A059] to-[#D8B467] hover:from-[#D4AF37] hover:to-[#E8D5A7] text-[#0B0A08] font-semibold text-sm tracking-wide shadow-lg shadow-[#C5A059]/20 transition-all active:scale-[0.98]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm tracking-wide shadow-[0_0_30px_rgba(37,99,235,0.45)] hover:shadow-[0_0_40px_rgba(56,189,248,0.7)] transition-all active:scale-[0.98]"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4 text-cyan-200" />
               <span>Start a Conversation</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
             <a
               href="#capabilities"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[#968F84]/35 hover:border-[#C5A059]/60 text-[#EDE8DF] text-sm tracking-wide bg-[#14120E]/50 backdrop-blur-sm transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-blue-400/30 hover:border-cyan-400/60 text-slate-200 hover:text-white text-sm tracking-wide bg-[#0E1320]/60 backdrop-blur-md transition-all"
             >
               <span>Explore Capabilities</span>
             </a>
           </motion.div>
 
-          {/* Interactive Simulated Architecture Visual (Warm Editorial Canvas) */}
+          {/* 2.5D Operational Blueprint Interactive Visual */}
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="luxury-card-elevated rounded-2xl p-5 sm:p-7 max-w-2xl mx-auto text-left relative overflow-hidden mb-14"
+            className="luxury-card-elevated rounded-3xl p-6 sm:p-8 max-w-3xl mx-auto text-left relative overflow-hidden mb-14 group"
           >
-            <div className="flex items-center justify-between pb-3.5 hairline-b mb-4">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
-                <span className="font-editorial text-sm tracking-wide text-[#E8D5A7]">
-                  Operational Blueprint Simulation
+            {/* Ambient Backlight */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="flex items-center justify-between pb-4 hairline-b mb-5">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="font-editorial text-lg tracking-wide text-white">
+                  Realtime Architecture Pipeline
                 </span>
               </div>
-              <span className="text-[10px] tracking-[0.16em] uppercase text-[#968F84] font-mono">
-                Realtime Dataflow
+              <span className="text-[11px] tracking-[0.16em] uppercase text-cyan-400 font-mono px-2.5 py-0.5 rounded-full bg-blue-950/80 border border-blue-500/30">
+                ACTIVE DATAFLOW
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="p-3.5 rounded-xl bg-[#0F0E0B] border border-[#C5A059]/15">
-                <div className="text-[10px] tracking-wider uppercase text-[#8F8A81] mb-1">
-                  Input Stream
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 rounded-2xl bg-[#090D18]/90 border border-blue-500/20">
+                <div className="text-[10px] tracking-widest uppercase text-slate-400 font-mono mb-1.5">
+                  01 · Ingestion
                 </div>
-                <div className="text-xs font-medium text-[#F7F3EB] mb-1">
-                  Customer &amp; Partner Inquiries
+                <div className="text-sm font-semibold text-white mb-1">
+                  Customer &amp; Field Intake
                 </div>
-                <div className="text-[10px] text-[#C5A059]">
-                  WhatsApp · Portals · Web APIs
-                </div>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-[#1A1813] border border-[#C5A059]/35 shadow-inner">
-                <div className="text-[10px] tracking-wider uppercase text-[#E8D5A7] mb-1 flex items-center gap-1">
-                  <Cpu className="w-3 h-3 text-[#C5A059]" />
-                  <span>EternaTech AI Core</span>
-                </div>
-                <div className="text-xs font-medium text-[#F7F3EB] mb-1">
-                  Realtime Parser &amp; Router
-                </div>
-                <div className="text-[10px] text-[#E8D5A7]">
-                  OCR · Validation · Automated Ledgers
+                <div className="text-xs text-slate-400 leading-relaxed">
+                  WhatsApp Cloud API, Custom Partner Portals &amp; Webhooks.
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-[#0F0E0B] border border-[#C5A059]/15">
-                <div className="text-[10px] tracking-wider uppercase text-[#8F8A81] mb-1">
-                  Target Outcome
+              <div className="p-4 rounded-2xl bg-gradient-to-b from-blue-950/80 to-[#0A0E1A]/90 border border-cyan-400/40 shadow-[0_0_25px_rgba(56,189,248,0.18)]">
+                <div className="text-[10px] tracking-widest uppercase text-cyan-300 font-mono mb-1.5 flex items-center gap-1.5">
+                  <Cpu className="w-3.5 h-3.5 text-cyan-400 animate-spin [animation-duration:10s]" />
+                  <span>02 · EternaTech AI Core</span>
                 </div>
-                <div className="text-xs font-medium text-[#F7F3EB] mb-1">
-                  Synced ERP &amp; Instant Invoicing
+                <div className="text-sm font-semibold text-white mb-1">
+                  Autonomous Processing
                 </div>
-                <div className="text-[10px] text-[#C5A059]">
-                  Sub-350ms · Zero Manual Labor
+                <div className="text-xs text-cyan-200/80 leading-relaxed font-mono">
+                  Vision OCR parsing, dynamic quotes, and structured ledger entries.
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-[#090D18]/90 border border-blue-500/20">
+                <div className="text-[10px] tracking-widest uppercase text-slate-400 font-mono mb-1.5">
+                  03 · Execution
+                </div>
+                <div className="text-sm font-semibold text-white mb-1">
+                  ERP &amp; Invoicing Sync
+                </div>
+                <div className="text-xs text-slate-400 leading-relaxed">
+                  Sub-350ms latency across databases, bank gateways, and dispatches.
                 </div>
               </div>
             </div>
           </motion.div>
 
           {/* Understated Proof Strip */}
-          <div className="grid grid-cols-3 gap-4 pt-8 hairline-t max-w-xl mx-auto text-center">
+          <div className="grid grid-cols-3 gap-4 pt-8 hairline-t max-w-2xl mx-auto text-center font-mono">
             <div>
-              <div className="font-editorial text-2xl sm:text-3xl font-light text-[#F7F3EB]">
+              <div className="font-editorial text-2xl sm:text-4xl font-light text-white">
                 &lt; 14 Days
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#968F84] mt-1 font-medium">
+              <div className="text-[10px] sm:text-[11px] tracking-[0.16em] uppercase text-slate-400 mt-1 font-medium">
                 Rapid MVP Deploy
               </div>
             </div>
             <div>
-              <div className="font-editorial text-2xl sm:text-3xl font-light text-[#C5A059]">
+              <div className="font-editorial text-2xl sm:text-4xl font-light text-cyan-400">
                 24 / 7
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#968F84] mt-1 font-medium">
+              <div className="text-[10px] sm:text-[11px] tracking-[0.16em] uppercase text-slate-400 mt-1 font-medium">
                 Automated Ops
               </div>
             </div>
             <div>
-              <div className="font-editorial text-2xl sm:text-3xl font-light text-[#F7F3EB]">
+              <div className="font-editorial text-2xl sm:text-4xl font-light text-white">
                 100%
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#968F84] mt-1 font-medium">
+              <div className="text-[10px] sm:text-[11px] tracking-[0.16em] uppercase text-slate-400 mt-1 font-medium">
                 Direct Leadership
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3. SELECTED ARCHITECTURAL WORKS (Real tangible proofs) */}
-        <section className="py-16 sm:py-24 hairline-t">
-          <div className="text-center max-w-xl mx-auto mb-14">
-            <span className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] font-medium block mb-2">
+        {/* 3. REPRESENTATIVE CASE DEPLOYMENTS */}
+        <section className="py-20 hairline-t">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono font-medium block mb-2">
               Representative Case Deployments
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-[#F7F3EB]">
+            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-white">
               Proven Systems in Production
             </h2>
-            <p className="text-sm text-[#A39D93] mt-2 font-light">
-              Architected for Indian enterprises scaling their operations with zero bloated SaaS licenses.
+            <p className="text-sm sm:text-base text-slate-300 mt-3 font-light">
+              Architected for ambitious enterprises that value high leverage and zero bloated SaaS licenses.
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-6">
             {architecturalWorks.map((work, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="luxury-card rounded-2xl p-6 sm:p-8 hover:border-[#C5A059]/40 transition-all group"
+                className="luxury-card rounded-2xl p-7 sm:p-9 hover:border-cyan-400/50 transition-all duration-300 group"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
                   <div>
-                    <span className="text-[10px] tracking-[0.18em] uppercase text-[#C5A059] font-medium">
+                    <span className="text-[11px] tracking-[0.2em] uppercase text-cyan-400 font-mono font-semibold">
                       {work.client}
                     </span>
-                    <h3 className="font-editorial text-xl sm:text-2xl text-[#F7F3EB] font-normal">
+                    <h3 className="font-editorial text-2xl sm:text-3xl text-white font-normal mt-0.5">
                       {work.title}
                     </h3>
                   </div>
-                  <div className="text-xs font-mono text-[#E8D5A7] px-3 py-1 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 self-start sm:self-auto">
+                  <div className="text-xs font-mono text-cyan-200 px-3.5 py-1.5 rounded-full border border-cyan-400/35 bg-blue-950/60 shadow-[0_0_15px_rgba(56,189,248,0.2)] self-start sm:self-auto">
                     {work.metric}
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#B3ACA0] leading-relaxed mb-4 font-light">
+                <p className="text-sm text-slate-300 leading-relaxed mb-5 font-light">
                   {work.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 pt-3 hairline-t">
+                <div className="flex flex-wrap gap-2 pt-4 hairline-t">
                   {work.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-[10px] tracking-wider uppercase text-[#8F8A81] px-2.5 py-0.5 rounded bg-[#161410] border border-[#C5A059]/15"
+                      className="text-[11px] tracking-wider uppercase font-mono text-slate-300 px-3 py-1 rounded-lg bg-[#0E1322] border border-blue-500/25"
                     >
                       {tag}
                     </span>
@@ -403,13 +420,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 4. THE ARCHITECTURAL SHIFT (Problem vs Resolution) */}
-        <section className="py-16 sm:py-24 hairline-t">
-          <div className="text-center max-w-xl mx-auto mb-12">
-            <span className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] font-medium block mb-2">
+        {/* 4. THE BOTTLENECK / THE SHIFT */}
+        <section className="py-20 hairline-t">
+          <div className="text-center max-w-xl mx-auto mb-14">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono font-medium block mb-2">
               The Architecture Shift
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-[#F7F3EB]">
+            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-white">
               Legacy workflows silently tax your growth.
             </h2>
           </div>
@@ -419,24 +436,24 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="luxury-card rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+              className="luxury-card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-mono text-[#8F8A81] tracking-wider">01</span>
-                  <span className="text-xs text-[#8F8A81] line-through">
+                  <span className="text-xs font-mono text-slate-500">01</span>
+                  <span className="text-xs text-rose-400/80 line-through">
                     Scattered Excel sheets &amp; unlogged WhatsApp chats
                   </span>
                 </div>
-                <h3 className="font-editorial text-xl sm:text-2xl text-[#F7F3EB] font-normal">
+                <h3 className="font-editorial text-xl sm:text-2xl text-white font-normal">
                   Unified Custom Web &amp; Mobile Portals
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A39D93] mt-1 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 font-light leading-relaxed">
                   Single source of truth with tailored interfaces for staff, partners, and customers.
                 </p>
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#C5A059] px-3 py-1 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/5 whitespace-nowrap">
-                Zero Data Loss
+              <div className="text-[11px] font-mono tracking-[0.16em] uppercase text-cyan-300 px-3.5 py-1 rounded-full border border-cyan-400/30 bg-blue-950/60 whitespace-nowrap">
+                Zero Leakage
               </div>
             </motion.div>
 
@@ -445,23 +462,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 0.1 }}
-              className="luxury-card-elevated rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+              className="luxury-card-elevated rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-mono text-[#C5A059] tracking-wider">02</span>
-                  <span className="text-xs text-[#8F8A81] line-through">
+                  <span className="text-xs font-mono text-cyan-400">02</span>
+                  <span className="text-xs text-rose-400/80 line-through">
                     Manual follow-ups, lost leads &amp; delayed invoicing
                   </span>
                 </div>
-                <h3 className="font-editorial text-xl sm:text-2xl text-[#F7F3EB] font-normal">
+                <h3 className="font-editorial text-xl sm:text-2xl text-white font-normal">
                   24/7 AI &amp; WhatsApp Workflow Automation
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A39D93] mt-1 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 font-light leading-relaxed">
                   Customer intake, immediate quoting, and payment reconciliations executed in seconds.
                 </p>
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#C5A059] px-3 py-1 rounded-full border border-[#C5A059]/40 bg-[#C5A059]/10 whitespace-nowrap">
+              <div className="text-[11px] font-mono tracking-[0.16em] uppercase text-cyan-300 px-3.5 py-1 rounded-full border border-cyan-400/40 bg-blue-900/40 whitespace-nowrap">
                 Sub-Second Velocity
               </div>
             </motion.div>
@@ -471,39 +488,39 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 0.2 }}
-              className="luxury-card rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+              className="luxury-card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs font-mono text-[#8F8A81] tracking-wider">03</span>
-                  <span className="text-xs text-[#8F8A81] line-through">
+                  <span className="text-xs font-mono text-slate-500">03</span>
+                  <span className="text-xs text-rose-400/80 line-through">
                     Six-month agency delays with black-box communication
                   </span>
                 </div>
-                <h3 className="font-editorial text-xl sm:text-2xl text-[#F7F3EB] font-normal">
+                <h3 className="font-editorial text-xl sm:text-2xl text-white font-normal">
                   Rapid, Production-Grade Engineering
                 </h3>
-                <p className="text-xs sm:text-sm text-[#A39D93] mt-1 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 font-light leading-relaxed">
                   Direct senior craftsmanship with tangible working releases delivered every 7 days.
                 </p>
               </div>
-              <div className="text-[10px] tracking-[0.16em] uppercase text-[#C5A059] px-3 py-1 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/5 whitespace-nowrap">
+              <div className="text-[11px] font-mono tracking-[0.16em] uppercase text-cyan-300 px-3.5 py-1 rounded-full border border-cyan-400/30 bg-blue-950/60 whitespace-nowrap">
                 Weekly Cadence
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* 5. CORE CAPABILITIES (Refined Editorial Suites) */}
-        <section id="capabilities" className="py-16 sm:py-24 hairline-t">
+        {/* 5. CORE CAPABILITIES */}
+        <section id="capabilities" className="py-20 hairline-t">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <span className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] font-medium block mb-2">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono font-medium block mb-2">
               Capabilities &amp; Specializations
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-[#F7F3EB]">
+            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-white">
               What We Construct
             </h2>
-            <p className="text-sm text-[#A39D93] mt-3 font-light">
+            <p className="text-sm sm:text-base text-slate-300 mt-3 font-light">
               We engineer bespoke software assets tailored to your business model.
             </p>
           </div>
@@ -516,34 +533,34 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="luxury-card rounded-2xl p-7 sm:p-10 relative overflow-hidden group hover:border-[#C5A059]/40 transition-all"
+                className="luxury-card rounded-2xl p-7 sm:p-10 relative overflow-hidden group hover:border-cyan-400/50 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <span className="font-editorial text-2xl text-[#C5A059] font-normal">
+                    <span className="font-editorial text-2xl sm:text-3xl text-cyan-400 font-normal">
                       {item.num}.
                     </span>
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#E8D5A7] px-2.5 py-0.5 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10">
+                    <span className="text-[11px] tracking-[0.2em] uppercase font-mono text-cyan-200 px-3 py-1 rounded-full border border-cyan-400/30 bg-blue-950/50">
                       {item.tag}
                     </span>
                   </div>
+                  <item.icon className="w-5 h-5 text-cyan-400/60 group-hover:text-cyan-300 transition-colors" />
                 </div>
 
-                <h3 className="font-editorial text-2xl sm:text-3xl text-[#F7F3EB] font-normal mb-1">
+                <h3 className="font-editorial text-2xl sm:text-3xl text-white font-normal mb-1">
                   {item.title}
                 </h3>
-                <div className="text-xs sm:text-sm text-[#C5A059] mb-4 font-light italic">
+                <div className="text-xs sm:text-sm text-cyan-300 mb-4 font-light italic">
                   {item.subtitle}
                 </div>
-                <p className="text-sm text-[#A39D93] leading-relaxed mb-6 font-light">
+                <p className="text-sm text-slate-300 leading-relaxed mb-6 font-light">
                   {item.desc}
                 </p>
 
-                {/* Highlights List */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-5 hairline-t">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 hairline-t">
                   {item.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-[#EDE8DF]/90">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] mt-1.5 shrink-0" />
+                    <div key={i} className="flex items-start gap-2.5 text-xs text-slate-200">
+                      <CheckCircle2 className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -553,13 +570,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 6. HOW WE BUILD (The Execution Methodology) */}
-        <section className="py-16 sm:py-24 hairline-t">
+        {/* 6. EXECUTION METHODOLOGY */}
+        <section className="py-20 hairline-t">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <span className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] font-medium block mb-2">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono font-medium block mb-2">
               Execution Methodology
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-[#F7F3EB]">
+            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-white">
               How We Build
             </h2>
           </div>
@@ -572,18 +589,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="luxury-card rounded-2xl p-6 sm:p-7 relative"
+                className="luxury-card rounded-2xl p-6 sm:p-8 relative"
               >
-                <div className="font-editorial text-3xl font-light text-[#C5A059] mb-3">
+                <div className="font-editorial text-3xl sm:text-4xl font-light text-cyan-400 mb-3">
                   {m.step}.
                 </div>
-                <h3 className="font-editorial text-xl text-[#F7F3EB] font-normal mb-1">
+                <h3 className="font-editorial text-xl sm:text-2xl text-white font-normal mb-1">
                   {m.title}
                 </h3>
-                <div className="text-[10px] tracking-[0.16em] uppercase text-[#C5A059] mb-3 font-medium">
+                <div className="text-[11px] tracking-[0.16em] uppercase text-cyan-300 font-mono mb-3 font-medium">
                   {m.timeline}
                 </div>
-                <p className="text-xs sm:text-sm text-[#A39D93] leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
                   {m.description}
                 </p>
               </motion.div>
@@ -591,33 +608,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7. COMMON QUESTIONS (Refined Accordion) */}
-        <section className="py-16 sm:py-20 hairline-t">
+        {/* 7. FREQUENTLY ASKED QUESTIONS */}
+        <section className="py-20 hairline-t">
           <div className="text-center max-w-xl mx-auto mb-12">
-            <span className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] font-medium block mb-2">
+            <span className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono font-medium block mb-2">
               Clarity &amp; Terms
             </span>
-            <h2 className="font-editorial text-3xl sm:text-4xl font-light text-[#F7F3EB]">
+            <h2 className="font-editorial text-3xl sm:text-4xl font-light text-white">
               Frequently Asked Questions
             </h2>
           </div>
 
-          <div className="space-y-3 max-w-2xl mx-auto">
+          <div className="space-y-3.5 max-w-2xl mx-auto">
             {faqs.map((f, i) => (
               <div
                 key={i}
-                className="luxury-card rounded-xl overflow-hidden border border-[#C5A059]/15"
+                className="luxury-card rounded-xl overflow-hidden border border-blue-500/20"
               >
                 <button
                   type="button"
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                   className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 focus:outline-none"
                 >
-                  <span className="font-editorial text-lg sm:text-xl text-[#F7F3EB] font-normal">
+                  <span className="font-editorial text-lg sm:text-xl text-white font-normal">
                     {f.q}
                   </span>
                   <ChevronDown
-                    className={`w-4 h-4 text-[#C5A059] transition-transform duration-300 shrink-0 ${
+                    className={`w-4 h-4 text-cyan-400 transition-transform duration-300 shrink-0 ${
                       activeFaq === i ? "rotate-180" : ""
                     }`}
                   />
@@ -629,7 +646,7 @@ export default function Home() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25 }}
-                      className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-[#A39D93] font-light leading-relaxed hairline-t pt-3"
+                      className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-300 font-light leading-relaxed hairline-t pt-3"
                     >
                       {f.a}
                     </motion.div>
@@ -640,8 +657,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 8. FOUNDER & DIRECT CONTACT (High-Trust Editorial Card) */}
-        <section id="contact" className="py-16 sm:py-24 hairline-t">
+        {/* 8. FOUNDER & DIRECT CONTACT */}
+        <section id="contact" className="py-20 hairline-t">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -649,53 +666,63 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="luxury-card-elevated rounded-3xl p-7 sm:p-12 text-center max-w-2xl mx-auto relative overflow-hidden"
           >
-            {/* Subtle corner ornament */}
-            <div className="text-[10px] tracking-[0.24em] uppercase text-[#C5A059] mb-4 font-medium">
+            {/* Direct Consultation Emblem */}
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-5">
+              <Image
+                src="/logo-colored.png"
+                alt="EternaTech"
+                width={80}
+                height={80}
+                className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(56,189,248,0.4)]"
+              />
+            </div>
+
+            <div className="text-[11px] tracking-[0.24em] uppercase text-cyan-400 font-mono mb-2 font-medium">
               Private Consultation
             </div>
 
-            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-[#F7F3EB] mb-2">
+            <h2 className="font-editorial text-3xl sm:text-5xl font-light text-white mb-2">
               Shashwat Manu
             </h2>
-            <div className="text-xs sm:text-sm tracking-wider uppercase text-[#968F84] mb-6 font-medium">
+            <div className="text-xs sm:text-sm tracking-wider uppercase font-mono text-slate-400 mb-6">
               Founder &amp; Technical Director · EternaTech
             </div>
 
-            <p className="text-sm sm:text-base text-[#C2BCB0] italic font-light leading-relaxed max-w-lg mx-auto mb-10">
+            <p className="text-sm sm:text-base text-slate-300 italic font-light leading-relaxed max-w-lg mx-auto mb-10">
               &ldquo;We partner selectively with ambitious founders and leadership teams who value senior engineering rigor, clean codebases, and direct execution over agency bureaucracy.&rdquo;
             </p>
 
             {/* Direct Contact Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-8">
               <a
                 href={WHATSAPP_PRIMARY}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#C5A059] to-[#D8B467] hover:from-[#D4AF37] hover:to-[#E8D5A7] text-[#0B0A08] font-medium text-xs sm:text-sm tracking-wider uppercase transition-all shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 text-cyan-200" />
                 <span>WhatsApp Direct</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
               <a
                 href={CALL_PRIMARY}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[#C5A059]/40 hover:border-[#C5A059] text-[#EDE8DF] text-xs sm:text-sm tracking-wider uppercase transition-all bg-[#161410]/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-blue-400/40 hover:border-cyan-400 text-slate-200 hover:text-white text-xs sm:text-sm tracking-wider uppercase transition-all bg-[#0A0E1A]/60"
               >
-                <Phone className="w-4 h-4 text-[#C5A059]" />
+                <Phone className="w-4 h-4 text-cyan-400" />
                 <span>+91 78277 75679</span>
               </a>
 
               <a
                 href={EMAIL_PRIMARY}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[#968F84]/30 hover:border-[#C5A059]/40 text-[#EDE8DF] text-xs sm:text-sm tracking-wider uppercase transition-all bg-[#161410]/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-slate-700 hover:border-cyan-400/50 text-slate-200 hover:text-white text-xs sm:text-sm tracking-wider uppercase transition-all bg-[#0A0E1A]/60"
               >
-                <Mail className="w-4 h-4 text-[#968F84]" />
+                <Mail className="w-4 h-4 text-slate-400" />
                 <span>Email Studio</span>
               </a>
             </div>
 
-            <div className="text-[11px] text-[#968F84] tracking-wider uppercase pt-6 hairline-t">
+            <div className="text-[11px] text-slate-400 tracking-wider uppercase font-mono pt-6 hairline-t">
               Based in Delhi NCR &amp; Ghaziabad, India · Serving Clients Globally
             </div>
           </motion.div>
@@ -704,22 +731,22 @@ export default function Home() {
 
       {/* 9. FLOATING CONCIERGE DOCK FOR MOBILE */}
       <aside className="fixed bottom-4 left-4 right-4 sm:hidden z-50">
-        <div className="luxury-card-elevated rounded-full p-2.5 pl-3.5 flex items-center justify-between shadow-2xl border border-[#C5A059]/40 backdrop-blur-2xl">
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 flex items-center justify-center shrink-0">
+        <div className="luxury-card-elevated rounded-full p-2.5 pl-3.5 flex items-center justify-between shadow-2xl border border-cyan-400/35 backdrop-blur-2xl">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 flex items-center justify-center shrink-0">
               <Image
-                src="/logo.png"
+                src="/logo-colored.png"
                 alt="EternaTech"
-                width={28}
-                height={28}
-                className="w-full h-full object-contain filter drop-shadow-[0_1px_6px_rgba(255,255,255,0.15)]"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]"
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-editorial text-sm text-[#F7F3EB] leading-none">
+              <span className="font-editorial text-base text-white leading-none">
                 EternaTech
               </span>
-              <span className="text-[9px] text-[#C5A059] tracking-wider uppercase mt-0.5">
+              <span className="text-[9px] text-cyan-400 tracking-wider uppercase font-mono mt-0.5">
                 Available Q4/Q1
               </span>
             </div>
@@ -729,7 +756,7 @@ export default function Home() {
             href={WHATSAPP_PRIMARY}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#C5A059] to-[#D8B467] text-[#0B0A08] text-xs font-semibold tracking-wide shadow-md"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(37,99,235,0.4)]"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>WhatsApp Direct</span>
@@ -738,19 +765,21 @@ export default function Home() {
       </aside>
 
       {/* 10. MINIMALIST FOOTER */}
-      <footer className="hairline-t py-8 px-5 sm:px-8 text-center text-xs text-[#968F84] relative z-10">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 font-light">
-          <div className="flex items-center justify-center sm:justify-start gap-2.5">
-            <Image
-              src="/logo.png"
-              alt="EternaTech"
-              width={20}
-              height={20}
-              className="w-5 h-5 object-contain"
-            />
+      <footer className="hairline-t py-8 px-5 sm:px-8 text-center text-xs text-slate-400 relative z-10 font-mono">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-light">
+          <div className="flex items-center justify-center sm:justify-start gap-3">
+            <div className="w-6 h-6 flex items-center justify-center shrink-0">
+              <Image
+                src="/logo-colored.png"
+                alt="EternaTech"
+                width={24}
+                height={24}
+                className="w-full h-full object-contain"
+              />
+            </div>
             <span>© 2026 EternaTech · Ghaziabad / Delhi NCR, India · eternatech.in</span>
           </div>
-          <div className="text-[11px] text-[#C5A059]/80 tracking-widest uppercase">
+          <div className="text-[11px] text-cyan-400/90 tracking-widest uppercase">
             Bespoke Engineering &amp; Artificial Intelligence
           </div>
         </div>

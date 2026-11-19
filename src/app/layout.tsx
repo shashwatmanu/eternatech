@@ -13,12 +13,12 @@ const cormorant = Cormorant_Garamond({
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0D0C0A",
+  themeColor: "#08090E",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo-colored.png",
         width: 1200,
         height: 630,
         alt: "EternaTech Logo",
@@ -54,16 +54,17 @@ export const metadata: Metadata = {
     title: "EternaTech — Bespoke Software & Intelligence Systems",
     description:
       "Bespoke web platforms, mobile apps, and intelligent WhatsApp & backend automations.",
-    images: ["/og-image.png"],
+    images: ["/logo-colored.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=3" },
-      { url: "/favicon.png?v=3", type: "image/png" },
+      { url: "/favicon.ico?v=4" },
+      { url: "/favicon.png?v=4", type: "image/png" },
+      { url: "/logo-colored.png?v=4", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=3",
+    shortcut: "/favicon.ico?v=4",
     apple: [
-      { url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=4", sizes: "180x180", type: "image/png" },
     ],
   },
 };
@@ -79,9 +80,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${cormorant.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.ico?v=4" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png?v=4" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=4" />
+      </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#0D0C0A] text-[#EDE8DF] font-sans overflow-x-hidden selection:bg-[#C5A059]/30 selection:text-[#F7F3EB]"
+        className="min-h-screen bg-[#08090E] text-[#F4F6FB] font-sans overflow-x-hidden selection:bg-blue-600/30 selection:text-cyan-200"
       >
         {children}
       </body>

@@ -1,78 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B0A08;
-  --foreground: #F2EDE4;
+  --background: #08090E;
+  --foreground: #F4F6FB;
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 }
 
 @theme inline {
-  --color-canvas: #0B0A08;
-  --color-surface: #14120E;
-  --color-surface-elevated: #1C1914;
+  --color-canvas: #08090E;
+  --color-surface: #0E121B;
+  --color-surface-elevated: #141926;
+  --color-cobalt: #2563EB;
+  --color-cyan-glow: #38BDF8;
   --color-gold: #C5A059;
   --color-gold-light: #E8D5A7;
-  --color-linen: #F2EDE4;
-  --color-muted: #968F84;
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 }
 
-/* Luxury Architectural Atmospheric Background */
+/* Awwwards-tier Obsidian Luxury Backdrop */
 .luxury-canvas {
-  background-color: #0B0A08;
+  background-color: #08090E;
   background-image: 
-    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(197, 160, 89, 0.14) 0%, transparent 60%),
-    radial-gradient(circle 500px at 85% 35%, rgba(142, 107, 43, 0.08) 0%, transparent 70%),
-    radial-gradient(circle 600px at 15% 75%, rgba(197, 160, 89, 0.07) 0%, transparent 70%);
+    radial-gradient(ellipse 100% 70% at 50% -15%, rgba(37, 99, 235, 0.18) 0%, transparent 65%),
+    radial-gradient(circle 650px at 90% 30%, rgba(56, 189, 248, 0.08) 0%, transparent 70%),
+    radial-gradient(circle 600px at 10% 70%, rgba(197, 160, 89, 0.07) 0%, transparent 70%),
+    radial-gradient(circle 500px at 50% 100%, rgba(37, 99, 235, 0.12) 0%, transparent 65%);
 }
 
-/* Subtle architectural guilloche line pattern */
+/* Precision Architectural Dot & Guilloche Canvas */
 .architectural-fine-grid {
-  background-size: 60px 60px;
+  background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(226, 201, 146, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(226, 201, 146, 0.035) 1px, transparent 1px);
+    radial-gradient(circle, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
 }
 
-/* Luxury Parchment Card Surfaces */
+/* Glassmorphism Luxury Cards */
 .luxury-card {
-  background: linear-gradient(180deg, rgba(22, 20, 16, 0.85) 0%, rgba(15, 14, 11, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(16, 21, 34, 0.72) 0%, rgba(11, 15, 25, 0.88) 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(226, 201, 146, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.14);
   box-shadow: 
-    0 16px 40px -15px rgba(0, 0, 0, 0.75), 
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    inset 0 0 20px rgba(197, 160, 89, 0.02);
+    0 20px 50px -15px rgba(0, 0, 0, 0.8), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 30px rgba(37, 99, 235, 0.04);
 }
 
 .luxury-card-elevated {
-  background: linear-gradient(180deg, rgba(28, 25, 20, 0.94) 0%, rgba(19, 17, 13, 0.96) 100%);
+  background: linear-gradient(180deg, rgba(20, 27, 45, 0.88) 0%, rgba(13, 18, 30, 0.94) 100%);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(226, 201, 146, 0.28);
+  border: 1px solid rgba(56, 189, 248, 0.28);
   box-shadow: 
-    0 24px 60px -20px rgba(0, 0, 0, 0.9), 
-    0 0 45px -12px rgba(197, 160, 89, 0.18), 
-    inset 0 1px 1px rgba(255, 255, 255, 0.09);
+    0 30px 70px -20px rgba(0, 0, 0, 0.9), 
+    0 0 50px -10px rgba(37, 99, 235, 0.22), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
 }
 
-/* Delicate Hairline Separators */
+/* Hairlines */
 .hairline-b {
-  border-bottom: 1px solid rgba(226, 201, 146, 0.15);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
 }
 
 .hairline-t {
-  border-top: 1px solid rgba(226, 201, 146, 0.15);
+  border-top: 1px solid rgba(56, 189, 248, 0.14);
 }
 
 .hairline-all {
-  border: 1px solid rgba(226, 201, 146, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.16);
 }
 
-/* Gold Gradient Text */
+/* Iridescent Text Gradients */
+.text-hero-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0F2FE 40%, #93C5FD 75%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .text-gold-gradient {
   background: linear-gradient(135deg, #FBF8F1 0%, #E8D5A7 50%, #C5A059 100%);
   -webkit-background-clip: text;
@@ -86,18 +92,18 @@
 
 /* Smooth custom scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0A08;
+  background: #08090E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #23201A;
+  background: #1E293B;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #3B82F6;
 }
