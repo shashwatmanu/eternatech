@@ -7,25 +7,21 @@ import {
   ArrowRight,
   ChevronDown,
   Layers,
-  Zap,
   BarChart2,
-  Users,
   ShieldCheck,
   MessageSquare,
-  Sparkles,
   Smartphone,
   Database,
-  Calendar,
-  ExternalLink,
   ChevronRight,
-  TrendingUp,
   Activity,
   CheckCircle2,
+  Cpu,
+  ArrowUpRight,
+  Network,
 } from "lucide-react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("yearly");
   const [activeTab, setActiveTab] = useState<number>(0);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -71,7 +67,6 @@ export default function Home() {
         "Instant escalations to human agents when high intent is detected",
       ],
       stats: { primary: "100%", label: "Lead Response Rate", secondary: "< 3 sec" },
-      mockupType: "whatsapp",
     },
     {
       title: "Bespoke Web & Mobile Platforms",
@@ -88,7 +83,6 @@ export default function Home() {
         "Automated CI/CD pipelines deployed to your own AWS/GCP cloud",
       ],
       stats: { primary: "99+", label: "Lighthouse Performance", secondary: "Zero Latency" },
-      mockupType: "web-app",
     },
     {
       title: "Custom Operational ERPs & Analytics",
@@ -105,7 +99,41 @@ export default function Home() {
         "Daily automated executive digests on Telegram and WhatsApp",
       ],
       stats: { primary: "14 hrs/wk", label: "Manual Work Eliminated", secondary: "99.9% Uptime" },
-      mockupType: "erp",
+    },
+  ];
+
+  const selectedBuilds = [
+    {
+      name: "RecoWiz",
+      badge: "Financial SaaS",
+      tagline: "Enterprise Financial Reconciliation Platform",
+      description:
+        "Automated invoice matching, ledger auditing, and financial workflow engine built with Next.js and high-performance FastAPI backends.",
+      stack: ["Next.js", "FastAPI", "PostgreSQL", "Audit Engine"],
+    },
+    {
+      name: "Elev8Solar",
+      badge: "Renewable Energy Platform",
+      tagline: "B2B & Residential Solar Commerce Engine",
+      description:
+        "High-conversion digital storefront and automated customer lead-capture architecture engineered for rapid commercial solar operations.",
+      stack: ["Next.js App Router", "Tailwind CSS", "Lead Automation", "Cloudflare"],
+    },
+    {
+      name: "BioMen Labs",
+      badge: "Interactive D2C",
+      tagline: "Interactive 3D D2C Commerce Experience",
+      description:
+        "Custom direct-to-consumer e-commerce funnel featuring interactive 3D product visualization, custom checkout APIs, and automated lead capture.",
+      stack: ["Three.js / WebGL", "Next.js", "Custom Checkout API", "Meta Pixel"],
+    },
+    {
+      name: "Mogger Ji",
+      badge: "Custom Apparel Storefront",
+      tagline: "Print-on-Demand E-Commerce Storefront",
+      description:
+        "High-speed, bespoke D2C apparel platform engineered end-to-end with dynamic product customization and streamlined order routing.",
+      stack: ["React Native / Web", "Dynamic Mockups", "Payment Gateway", "Logistics API"],
     },
   ];
 
@@ -114,9 +142,8 @@ export default function Home() {
       name: "Sprint MVP",
       type: "basic",
       description: "For founders validating a new concept or launching a rapid mobile/web product.",
-      priceMonthly: "₹95,000",
-      priceYearly: "₹75,000",
-      period: "/ sprint",
+      scopeLabel: "Rapid 2-Week Build",
+      period: "Fixed delivery timeline",
       popular: false,
       features: [
         "Full-stack Next.js or React Native MVP",
@@ -133,9 +160,8 @@ export default function Home() {
       name: "Scale Engine",
       type: "popular",
       description: "Our signature engagement. Complete custom engineering, WhatsApp automations, and ERP.",
-      priceMonthly: "₹1,85,000",
-      priceYearly: "₹1,45,000",
-      period: "/ engagement",
+      scopeLabel: "End-to-End Turnkey System",
+      period: "Milestone-based delivery",
       popular: true,
       features: [
         "Production Web App + Mobile iOS/Android app",
@@ -153,9 +179,8 @@ export default function Home() {
       name: "Enterprise Studio",
       type: "pro",
       description: "For established businesses needing dedicated engineering teams and complex transformations.",
-      priceMonthly: "Custom",
-      priceYearly: "Custom",
-      period: "flexible scope",
+      scopeLabel: "Custom Dedicated Architecture",
+      period: "Dedicated engineering pods",
       popular: false,
       features: [
         "Dedicated full-stack engineering team pods",
@@ -167,51 +192,6 @@ export default function Home() {
       ],
       buttonText: "Talk to Founder",
       ctaLink: "https://wa.me/917827775679?text=Hi%20Shashwat,%20let's%20discuss%20an%20Enterprise%20custom%20software%20engagement.",
-    },
-  ];
-
-  const testimonials = [
-    {
-      company: "Elev8 Solar Technologies",
-      quote: "EternaTech completely modernized our dealer onboarding and operational portal. Our dealer turnaround dropped from 48 hours to under 20 minutes.",
-      author: "Aditya Sharma",
-      role: "Managing Director",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
-    },
-    {
-      company: "FleetRoute Logistics",
-      quote: "The bespoke dispatch ERP and WhatsApp driver tracking system saved us over 18 hours of manual phone coordination every single day.",
-      author: "Karan Malhotra",
-      role: "VP of Logistics",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-    },
-    {
-      company: "Aura Dental Clinics",
-      quote: "Our patient appointments and follow-up reminders run completely on autopilot via WhatsApp. Zero missed appointments this quarter.",
-      author: "Dr. Rohini Mehta",
-      role: "Chief of Clinical Ops",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
-    },
-    {
-      company: "NexGen Financial Advisory",
-      quote: "Unlike agencies that deliver templates and disappear, Shashwat and his team wrote pristine code and handed over full IP without fuss.",
-      author: "Siddharth Jain",
-      role: "Founder & CEO",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
-    },
-    {
-      company: "VentureCraft Studio",
-      quote: "We brought them in to rescue a stalled React Native build. They audited, stabilized, and shipped it to the App Store in 12 days flat.",
-      author: "Pooja Varma",
-      role: "Head of Product",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
-    },
-    {
-      company: "UrbanSpaces Realty",
-      quote: "Their lead intake system filters genuine high-ticket buyers and delivers verified site visit bookings straight to our sales WhatsApp.",
-      author: "Rohan Singhal",
-      role: "Director of Acquisitions",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
     },
   ];
 
@@ -240,7 +220,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)]">
-      {/* Decorative vertical dashed lines per SKILL.md */}
+      {/* Decorative vertical dashed lines per SKILL.md & DESIGN.md */}
       <div className="dashed-line hidden xl:block" style={{ left: "calc(50% - 600px)" }} />
       <div className="dashed-line hidden xl:block" style={{ right: "calc(50% - 600px)" }} />
 
@@ -283,11 +263,11 @@ export default function Home() {
             <a href="#features" className="hover:text-[var(--text-primary)] transition-colors">
               Platforms
             </a>
+            <a href="#builds" className="hover:text-[var(--text-primary)] transition-colors">
+              Selected Builds
+            </a>
             <a href="#pricing" className="hover:text-[var(--text-primary)] transition-colors">
               Engagements
-            </a>
-            <a href="#testimonials" className="hover:text-[var(--text-primary)] transition-colors">
-              Proof
             </a>
             <a href="#faq" className="hover:text-[var(--text-primary)] transition-colors">
               FAQ
@@ -353,140 +333,139 @@ export default function Home() {
               <span>Start a Project</span>
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#features" className="btn-ghost w-full sm:w-auto justify-center">
-              <span>View Capabilities</span>
+            <a href="#builds" className="btn-ghost w-full sm:w-auto justify-center">
+              <span>View Selected Builds</span>
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
 
-          {/* Three Floating Realistic UI Mockup Cards (SKILL.md Step 3 & Step 10) */}
-          <div className="w-full max-w-[1100px] grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {/* Left Card: Live WhatsApp Order Intake (-1.5deg tilt) */}
-            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-5 text-left shadow-[var(--shadow-md)]">
-              <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-semibold text-[var(--text-primary)]">WhatsApp AI Engine</span>
-                </div>
-                <span className="text-[11px] font-mono font-medium text-[var(--text-muted)]">Live · Meta Cloud</span>
-              </div>
-
-              {/* Chat snippet */}
-              <div className="space-y-2.5 text-xs mb-4">
-                <div className="bg-[var(--bg-subtle)] p-2.5 rounded-lg border border-[var(--border)] text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)] block mb-1">Customer (NCR):</span>
-                  &ldquo;Need 500 units of SKU-A4 dispatched to Gurgaon warehouse by Friday.&rdquo;
-                </div>
-                <div className="bg-[var(--accent-light)] p-2.5 rounded-lg border border-[#BAE6FD] text-[var(--accent)] font-medium">
-                  <div className="flex items-center gap-1.5 mb-1 font-semibold">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>AI Automated Dispatch</span>
-                  </div>
-                  Inventory verified. PO #7892 generated. Invoice sent for instant UPI approval.
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between pt-2 border-t border-[var(--border)] text-[11px]">
-                <span className="text-[var(--text-muted)]">Fulfillment Status</span>
-                <span className="text-emerald-600 font-semibold flex items-center gap-1">
-                  <CheckCircle2 className="w-3 h-3" /> Auto-Synced to Tally
-                </span>
-              </div>
-            </div>
-
-            {/* Center Main Card: Throughput & ARR with Warm Yellow Data Bars (#E8D87A) */}
-            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-6 text-left shadow-[var(--shadow-lg)] relative z-20 md:-mt-6">
-              <div className="flex items-center justify-between pb-4 border-b border-[var(--border)] mb-5">
-                <div>
-                  <div className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-wider">
-                    Total Gross Throughput
-                  </div>
-                  <div className="text-2xl font-bold font-display text-[var(--text-primary)] mt-0.5">
-                    ₹ 1,48,20,500
-                  </div>
-                </div>
-                <div className="flex items-center gap-1 text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-                  <TrendingUp className="w-3.5 h-3.5" />
-                  <span>+34.2%</span>
-                </div>
-              </div>
-
-              {/* Realistic Warm Yellow Chart Bars per SKILL.md */}
-              <div className="text-xs font-medium text-[var(--text-secondary)] mb-2 flex items-center justify-between">
-                <span>Monthly Automated Volume</span>
-                <span className="text-[var(--text-muted)]">Q3-Q4 Performance</span>
-              </div>
-              <div className="h-28 flex items-end justify-between gap-2 pt-4 px-2 pb-2 bg-[var(--bg-subtle)] rounded-lg border border-[var(--border)] mb-4">
-                {[
-                  { m: "Jul", h: "45%" },
-                  { m: "Aug", h: "62%" },
-                  { m: "Sep", h: "78%" },
-                  { m: "Oct", h: "92%" },
-                  { m: "Nov", h: "85%" },
-                  { m: "Dec", h: "100%" },
-                ].map((item, i) => (
-                  <div key={i} className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full rounded-t-sm transition-all duration-500 hover:brightness-95"
-                      style={{
-                        height: item.h,
-                        backgroundColor: "var(--chart-bar)", // #E8D87A warm yellow per SKILL.md
-                      }}
-                    />
-                    <span className="text-[10px] font-mono text-[var(--text-muted)]">{item.m}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-1 text-xs">
-                <div className="p-2 rounded bg-[var(--bg-subtle)] border border-[var(--border)]">
-                  <div className="text-[10px] text-[var(--text-muted)]">Active Orders</div>
-                  <div className="font-semibold text-[var(--text-primary)]">14,280 Units</div>
-                </div>
-                <div className="p-2 rounded bg-[var(--bg-subtle)] border border-[var(--border)]">
-                  <div className="text-[10px] text-[var(--text-muted)]">Avg Fulfillment</div>
-                  <div className="font-semibold text-emerald-600">4.2 min</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Card: Real-time Multi-channel Sync Logs (+1.5deg tilt) */}
-            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-5 text-left shadow-[var(--shadow-md)]">
-              <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
-                <div className="flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-[var(--accent)]" />
-                  <span className="text-xs font-semibold text-[var(--text-primary)]">System Operations</span>
-                </div>
-                <span className="text-[11px] font-mono font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
-                  99.98% OK
-                </span>
-              </div>
-
-              {/* Operational log list */}
-              <div className="space-y-2.5 text-xs">
-                {[
-                  { name: "Delhivery Surface Sync", val: "48 Shipments", status: "Processed" },
-                  { name: "Razorpay Auto-Settlement", val: "₹ 3,40,000", status: "Verified" },
-                  { name: "PostgreSQL Cloud Replica", val: "12ms Latency", status: "Healthy" },
-                  { name: "Meta Cloud Webhook", val: "1,200 events/m", status: "Active" },
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between p-2 rounded bg-[var(--bg-subtle)] border border-[var(--border)]"
-                  >
-                    <div>
-                      <div className="font-medium text-[var(--text-primary)]">{item.name}</div>
-                      <div className="text-[10px] text-[var(--text-muted)] font-mono">{item.val}</div>
-                    </div>
-                    <span className="text-[10px] font-semibold text-emerald-600 bg-white px-2 py-0.5 rounded border border-[var(--border)]">
-                      {item.status}
+          {/* Clean 2.5D Architectural Workflow Cards (No Dummy Numbers) */}
+          <div className="w-full max-w-[1100px] grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            {/* Node 1: Inbound Channels (-1.5deg tilt) */}
+            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-6 text-left shadow-[var(--shadow-md)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
+                  <div className="flex items-center gap-2">
+                    <MessageSquare className="w-4 h-4 text-[var(--accent)]" />
+                    <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
+                      Stage 01 · Inbound
                     </span>
                   </div>
-                ))}
+                  <span className="text-[11px] font-mono text-[var(--accent)] bg-[var(--accent-light)] px-2 py-0.5 rounded font-medium">
+                    Omnichannel
+                  </span>
+                </div>
+
+                <div className="space-y-3 mb-5">
+                  <div className="p-3 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)]">
+                    <div className="text-[11px] font-semibold text-[var(--text-primary)] mb-1 flex items-center gap-1.5">
+                      <Smartphone className="w-3.5 h-3.5 text-[var(--accent)]" /> Web & Mobile Apps
+                    </div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      High-conversion Next.js storefronts & React Native portals capturing qualified user requests.
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)]">
+                    <div className="text-[11px] font-semibold text-[var(--text-primary)] mb-1 flex items-center gap-1.5">
+                      <MessageSquare className="w-3.5 h-3.5 text-emerald-600" /> Meta Cloud WhatsApp
+                    </div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Official Meta API webhook ingesting inquiries, PO requests, and direct customer interactions.
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-[var(--border)] flex items-center justify-between text-[11px] text-[var(--text-muted)]">
-                <span>Infrastructure: AWS Mumbai (ap-south-1)</span>
+              <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between text-[11px]">
+                <span className="text-[var(--text-muted)]">Input Protocol</span>
+                <span className="font-semibold text-[var(--text-primary)] font-mono">Real-time Webhook</span>
+              </div>
+            </div>
+
+            {/* Node 2: Core Engineering & AI Logic (Center Elevated) */}
+            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-6 text-left shadow-[var(--shadow-lg)] relative z-20 md:-mt-4 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
+                  <div className="flex items-center gap-2">
+                    <Cpu className="w-4 h-4 text-emerald-600" />
+                    <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
+                      Stage 02 · Engine
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold border border-emerald-200">
+                    Bespoke Code
+                  </span>
+                </div>
+
+                <div className="space-y-3 mb-5">
+                  <div className="p-3 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)]">
+                    <div className="text-[11px] font-semibold text-[var(--text-primary)] mb-1 flex items-center gap-1.5">
+                      <Network className="w-3.5 h-3.5 text-[var(--accent)]" /> Intent & Business Rules
+                    </div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Context-aware parsing, inventory validation, and pricing tier determination with zero manual intervention.
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-[var(--accent-light)] border border-[#BAE6FD]">
+                    <div className="text-[11px] font-semibold text-[var(--accent)] mb-1 flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5" /> 100% Client IP Ownership
+                    </div>
+                    <div className="text-xs text-[var(--accent-hover)] font-medium">
+                      Built directly on your cloud infrastructure (AWS/GCP). Zero platform lock-in or recurring seat fees.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between text-[11px]">
+                <span className="text-[var(--text-muted)]">Core Framework</span>
+                <span className="font-semibold text-emerald-700 font-mono">Next.js · Node · Python</span>
+              </div>
+            </div>
+
+            {/* Node 3: Automated Operations (+1.5deg tilt) */}
+            <div className="hero-card bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-6 text-left shadow-[var(--shadow-md)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-3 border-b border-[var(--border)] mb-4">
+                  <div className="flex items-center gap-2">
+                    <Activity className="w-4 h-4 text-[var(--accent)]" />
+                    <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider">
+                      Stage 03 · Execution
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-medium">
+                    Zero Manual Entry
+                  </span>
+                </div>
+
+                <div className="space-y-3 mb-5">
+                  <div className="p-3 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)]">
+                    <div className="text-[11px] font-semibold text-[var(--text-primary)] mb-1 flex items-center gap-1.5">
+                      <Database className="w-3.5 h-3.5 text-amber-600" /> Unified ERP & Accounting
+                    </div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Instant sync to Tally, warehouse dispatch systems, and customer ledger databases.
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)]">
+                    <div className="text-[11px] font-semibold text-[var(--text-primary)] mb-1 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Automated Billing & Dispatch
+                    </div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Instant digital invoice delivery, UPI checkout links, and live parcel tracking triggers.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between text-[11px]">
+                <span className="text-[var(--text-muted)]">Operational State</span>
+                <span className="font-semibold text-emerald-600 font-mono flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Fully Autonomous
+                </span>
               </div>
             </div>
           </div>
@@ -494,49 +473,9 @@ export default function Home() {
       </section>
 
       {/* ========================================================= */}
-      {/* STEP 4 — LOGO STRIP MARQUEE                               */}
+      {/* STEP 5 — 3-UP CAPABILITY CARDS                            */}
       {/* ========================================================= */}
-      <section className="py-8 border-y border-[var(--border)] overflow-hidden bg-white">
-        <div className="max-w-[1200px] mx-auto px-6 mb-4 text-center">
-          <p className="text-xs uppercase tracking-widest font-semibold text-[var(--text-muted)]">
-            Trusted by high-growth founders & manufacturing enterprises across NCR & Globally
-          </p>
-        </div>
-        <div className="relative w-full overflow-hidden">
-          <div className="marquee-track flex items-center gap-16 py-2">
-            {[
-              "ELEV8 SOLAR",
-              "FLEETROUTE",
-              "AURA CLINICS",
-              "NEXGEN CAPITAL",
-              "URBAN SPACES",
-              "VENTURE CRAFT",
-              "METRO LOGISTICS",
-              "APEX ENGINEERING",
-              "ELEV8 SOLAR",
-              "FLEETROUTE",
-              "AURA CLINICS",
-              "NEXGEN CAPITAL",
-              "URBAN SPACES",
-              "VENTURE CRAFT",
-              "METRO LOGISTICS",
-              "APEX ENGINEERING",
-            ].map((brand, i) => (
-              <div
-                key={i}
-                className="text-lg font-bold font-mono tracking-wider text-[var(--text-muted)] opacity-50 hover:opacity-90 transition-opacity cursor-default whitespace-nowrap"
-              >
-                {brand}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================= */}
-      {/* STEP 5 — 3-UP FEATURE CARDS                               */}
-      {/* ========================================================= */}
-      <section id="capabilities" className="py-24 bg-[var(--bg-subtle)]">
+      <section id="capabilities" className="py-24 bg-[var(--bg-subtle)] border-t border-[var(--border)]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 reveal">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4">
@@ -605,15 +544,15 @@ export default function Home() {
                   <div className="bg-white p-3 rounded-lg border border-[var(--border)] text-xs text-[var(--text-secondary)] space-y-1">
                     <div className="font-semibold text-[var(--text-primary)] text-[11px]">Instant Intent Parser:</div>
                     <div className="text-[11px] text-emerald-700 font-mono">
-                      Query: &ldquo;Send latest pricing catalog for dealer tier 2&rdquo;
+                      Inbound: Order confirmation & inquiry routing
                     </div>
                     <div className="text-[10px] text-[var(--text-muted)]">
                       ✓ Instant PDF dispatched · CRM lead marked Qualified
                     </div>
                   </div>
                   <div className="h-5 flex items-center justify-between text-[11px] font-mono text-[var(--text-muted)]">
-                    <span>Response: 1.2s</span>
-                    <span>Success: 99.4%</span>
+                    <span>Protocol: Meta Cloud API</span>
+                    <span>Status: High Throughput</span>
                   </div>
                 </div>
 
@@ -647,7 +586,7 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="bg-white p-2.5 rounded border border-[var(--border)]">
                       <span className="text-[10px] text-[var(--text-muted)] block">Inventory Sync</span>
-                      <span className="font-bold text-[var(--text-primary)]">99.8% Match</span>
+                      <span className="font-bold text-[var(--text-primary)]">Live State</span>
                     </div>
                     <div className="bg-white p-2.5 rounded border border-[var(--border)]">
                       <span className="text-[10px] text-[var(--text-muted)] block">Ledger Auto-Post</span>
@@ -772,7 +711,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Panel: Realistic Product UI Screenshot / Card */}
+            {/* Right Panel: Realistic Product UI Preview */}
             <div className="lg:col-span-7">
               <div className="bg-white border border-[var(--border)] rounded-[var(--radius-xl)] p-6 shadow-[var(--shadow-float)]">
                 <div className="flex items-center justify-between pb-4 border-b border-[var(--border)] mb-6">
@@ -802,10 +741,10 @@ export default function Home() {
                     </div>
                     <div className="flex gap-2 text-xs font-medium">
                       <span className="px-3 py-1.5 bg-white border border-[var(--border)] rounded-md text-[var(--text-secondary)]">
-                        Daily
+                        Architecture
                       </span>
                       <span className="px-3 py-1.5 bg-[var(--text-primary)] text-white rounded-md">
-                        Monthly
+                        Live Sync
                       </span>
                     </div>
                   </div>
@@ -837,16 +776,16 @@ export default function Home() {
                   {/* Metrics Row */}
                   <div className="grid grid-cols-3 gap-4 pt-2">
                     <div className="bg-white p-3 rounded-lg border border-[var(--border)] text-left">
-                      <div className="text-[11px] text-[var(--text-muted)]">API Latency</div>
-                      <div className="text-base font-bold text-[var(--text-primary)] mt-0.5">24ms</div>
+                      <div className="text-[11px] text-[var(--text-muted)]">Engine Stack</div>
+                      <div className="text-sm font-bold text-[var(--text-primary)] mt-0.5">Next.js + Node</div>
                     </div>
                     <div className="bg-white p-3 rounded-lg border border-[var(--border)] text-left">
-                      <div className="text-[11px] text-[var(--text-muted)]">Automated Syncs</div>
-                      <div className="text-base font-bold text-emerald-600 mt-0.5">99.98%</div>
+                      <div className="text-[11px] text-[var(--text-muted)]">Data Security</div>
+                      <div className="text-sm font-bold text-emerald-600 mt-0.5">SOC2 Ready</div>
                     </div>
                     <div className="bg-white p-3 rounded-lg border border-[var(--border)] text-left">
                       <div className="text-[11px] text-[var(--text-muted)]">IP Ownership</div>
-                      <div className="text-base font-bold text-[var(--text-primary)] mt-0.5">100% Client</div>
+                      <div className="text-sm font-bold text-[var(--text-primary)] mt-0.5">100% Client</div>
                     </div>
                   </div>
                 </div>
@@ -857,49 +796,81 @@ export default function Home() {
       </section>
 
       {/* ========================================================= */}
-      {/* STEP 7 — ASYMMETRIC PRICING SECTION                       */}
+      {/* STEP 7 — SELECTED SYSTEMS & BUILDS (REAL WORK, NO FAKE STATS) */}
+      {/* ========================================================= */}
+      <section id="builds" className="py-24 bg-[var(--bg-subtle)] border-b border-[var(--border)]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16 reveal">
+            <span className="text-xs uppercase tracking-widest font-semibold text-[var(--accent)] block mb-2">
+              Engineered Deployments
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4">
+              Selected Systems & Builds.
+            </h2>
+            <p className="text-[17px] text-[var(--text-secondary)]">
+              Real software platforms and automated infrastructure engineered end-to-end for production scale.
+            </p>
+          </div>
+
+          {/* 4-Card Grid of Real Engineered Systems */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {selectedBuilds.map((build, idx) => (
+              <div
+                key={idx}
+                className="bg-white border border-[var(--border)] rounded-[var(--radius-lg)] p-8 shadow-[var(--shadow-sm)] hover:border-[var(--accent)] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-3 py-1 rounded-full">
+                      {build.badge}
+                    </span>
+                    <ArrowUpRight className="w-5 h-5 text-[var(--text-muted)]" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold font-display text-[var(--text-primary)] mb-2">
+                    {build.name}
+                  </h3>
+                  <div className="text-sm font-semibold text-[var(--text-secondary)] mb-4">
+                    {build.tagline}
+                  </div>
+                  <p className="text-[15px] text-[var(--text-secondary)] leading-relaxed mb-6">
+                    {build.description}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[var(--border)] flex flex-wrap gap-2">
+                  {build.stack.map((tech, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="text-[11px] font-mono font-medium text-[var(--text-muted)] bg-[var(--bg-subtle)] border border-[var(--border)] px-2.5 py-1 rounded-md"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* STEP 8 — ASYMMETRIC ENGAGEMENTS SECTION (NO PUBLIC RUPEE PRICES) */}
       {/* ========================================================= */}
       <section id="pricing" className="py-24 bg-pattern relative border-b border-[var(--border)]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12 reveal">
+          <div className="text-center max-w-2xl mx-auto mb-16 reveal">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4">
               Transparent, High-Leverage Engagements.
             </h2>
-            <p className="text-[17px] text-[var(--text-secondary)] mb-8">
-              No bloated retainers. No hidden per-seat licensing. Complete source code handover with 100% intellectual property ownership.
+            <p className="text-[17px] text-[var(--text-secondary)]">
+              No bloated retainers. No recurring seat licensing. Complete source code handover with 100% intellectual property ownership.
             </p>
-
-            {/* Monthly / Yearly Toggle (green pill toggle style per SKILL.md) */}
-            <div className="inline-flex items-center bg-white border border-[var(--border)] rounded-[var(--radius-pill)] p-1 shadow-sm">
-              <button
-                onClick={() => setBillingCycle("monthly")}
-                className={`px-5 py-2 rounded-[var(--radius-pill)] text-sm font-medium transition-all ${
-                  billingCycle === "monthly"
-                    ? "bg-[var(--accent)] text-white shadow-sm"
-                    : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
-                }`}
-              >
-                Monthly Plan
-              </button>
-              <button
-                onClick={() => setBillingCycle("yearly")}
-                className={`px-5 py-2 rounded-[var(--radius-pill)] text-sm font-medium transition-all flex items-center gap-1.5 ${
-                  billingCycle === "yearly"
-                    ? "bg-[var(--accent)] text-white shadow-sm"
-                    : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
-                }`}
-              >
-                <span>Full Project Engagement</span>
-                <span className="text-[11px] bg-white text-[var(--accent)] font-bold px-2 py-0.5 rounded-full">
-                  Save 20%
-                </span>
-              </button>
-            </div>
           </div>
 
           {/* Asymmetric 3-column pricing grid per SKILL.md Step 7 */}
           <div className="grid grid-cols-1 md:grid-cols-3 items-start max-w-[1050px] mx-auto gap-8 md:gap-0">
-            {/* Plan 1: Basic Plan (Transparent, no card background, plain button) */}
+            {/* Plan 1: Basic Plan (Sprint MVP) */}
             <div className="p-8 md:p-10 bg-transparent flex flex-col justify-between h-full">
               <div>
                 <h3 className="text-xl font-bold text-[var(--text-primary)] font-body mb-2">
@@ -910,11 +881,11 @@ export default function Home() {
                 </p>
 
                 <div className="mb-8">
-                  <div className="font-display text-4xl sm:text-5xl font-extrabold text-[var(--text-primary)]">
-                    {billingCycle === "monthly" ? pricingPlans[0].priceMonthly : pricingPlans[0].priceYearly}
+                  <div className="font-display text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)]">
+                    {pricingPlans[0].scopeLabel}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)] font-medium mt-1">
-                    {pricingPlans[0].period} · No recurring seat fees
+                  <div className="text-xs text-[var(--text-muted)] font-medium mt-2">
+                    {pricingPlans[0].period} · No recurring fees
                   </div>
                 </div>
 
@@ -938,7 +909,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Plan 2: POPULAR Plan (Elevated, white card bg, shadow, accent button, margin-top offset) */}
+            {/* Plan 2: POPULAR Plan (Scale Engine) */}
             <div className="bg-white border border-[var(--border)] rounded-[var(--radius-lg)] shadow-[var(--shadow-lg)] p-8 md:p-10 md:-mt-6 relative z-10 flex flex-col justify-between">
               <div>
                 <div className="text-center text-xs font-bold tracking-widest uppercase text-[var(--accent)] pb-3 mb-6 border-b border-[var(--border)]">
@@ -953,11 +924,11 @@ export default function Home() {
                 </p>
 
                 <div className="mb-8">
-                  <div className="font-display text-4xl sm:text-5xl font-extrabold text-[var(--text-primary)]">
-                    {billingCycle === "monthly" ? pricingPlans[1].priceMonthly : pricingPlans[1].priceYearly}
+                  <div className="font-display text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)]">
+                    {pricingPlans[1].scopeLabel}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)] font-medium mt-1">
-                    {pricingPlans[1].period} · Complete turnkey deployment
+                  <div className="text-xs text-[var(--text-muted)] font-medium mt-2">
+                    {pricingPlans[1].period} · Complete custom architecture
                   </div>
                 </div>
 
@@ -982,7 +953,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Plan 3: Pro Plan (Transparent, no card background, plain button) */}
+            {/* Plan 3: Pro Plan (Enterprise Studio) */}
             <div className="p-8 md:p-10 bg-transparent flex flex-col justify-between h-full">
               <div>
                 <h3 className="text-xl font-bold text-[var(--text-primary)] font-body mb-2">
@@ -993,11 +964,11 @@ export default function Home() {
                 </p>
 
                 <div className="mb-8">
-                  <div className="font-display text-4xl sm:text-5xl font-extrabold text-[var(--text-primary)]">
-                    {pricingPlans[2].priceMonthly}
+                  <div className="font-display text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)]">
+                    {pricingPlans[2].scopeLabel}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)] font-medium mt-1">
-                    {pricingPlans[2].period} · Custom team allocation
+                  <div className="text-xs text-[var(--text-muted)] font-medium mt-2">
+                    {pricingPlans[2].period} · Dedicated engineering team
                   </div>
                 </div>
 
@@ -1020,57 +991,6 @@ export default function Home() {
                 {pricingPlans[2].buttonText} →
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================= */}
-      {/* STEP 8 — TESTIMONIALS (3x2 GRID, --bg-muted, NO BORDER)   */}
-      {/* ========================================================= */}
-      <section id="testimonials" className="py-24 bg-[var(--bg-subtle)]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16 reveal">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4">
-              Proven Delivery. Trusted by Builders.
-            </h2>
-            <p className="text-[17px] text-[var(--text-secondary)]">
-              Direct feedback from business owners and technical leaders who partnered with EternaTech.
-            </p>
-          </div>
-
-          {/* Testimonials 3x2 Grid per SKILL.md Step 8: gray bg (--bg-muted), 1px border gap, company logo at TOP */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] rounded-[var(--radius-lg)] overflow-hidden shadow-[var(--shadow-sm)]">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-[var(--bg-muted)] p-8 flex flex-col justify-between">
-                <div>
-                  {/* Company Logo at TOP per SKILL.md */}
-                  <div className="mb-6 font-mono font-bold text-xs uppercase tracking-wider text-[var(--text-primary)] opacity-90 flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[var(--accent)]" />
-                    <span>{t.company}</span>
-                  </div>
-
-                  {/* Quote */}
-                  <p className="text-[15px] leading-relaxed text-[var(--text-primary)] mb-6 font-normal">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                </div>
-
-                {/* Author Avatar + Name + Role */}
-                <div className="flex items-center gap-3 pt-4 border-t border-[rgba(0,0,0,0.06)]">
-                  <Image
-                    src={t.avatar}
-                    alt={t.author}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <div className="text-sm font-semibold text-[var(--text-primary)]">{t.author}</div>
-                    <div className="text-xs text-[var(--text-muted)]">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -1232,8 +1152,8 @@ export default function Home() {
                 Studio
               </div>
               <ul className="space-y-2 text-xs text-[var(--text-secondary)]">
+                <li><a href="#builds" className="hover:text-[var(--text-primary)]">Selected Builds</a></li>
                 <li><a href="#pricing" className="hover:text-[var(--text-primary)]">Engagements</a></li>
-                <li><a href="#testimonials" className="hover:text-[var(--text-primary)]">Client Proof</a></li>
                 <li><a href="#faq" className="hover:text-[var(--text-primary)]">FAQ</a></li>
                 <li><a href="https://wa.me/917827775679" className="hover:text-[var(--text-primary)]">Direct WhatsApp</a></li>
               </ul>
@@ -1260,8 +1180,6 @@ export default function Home() {
               © 2026 EternaTech. All rights reserved. 100% Client Code & IP Ownership.
             </div>
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-[var(--text-primary)]">Privacy Policy</a>
-              <a href="#" className="hover:text-[var(--text-primary)]">Terms of Service</a>
               <a href="https://eternatech.in" className="hover:text-[var(--text-primary)]">eternatech.in</a>
             </div>
           </div>
